@@ -51,10 +51,8 @@ int main()
 		{
 			f1 >> ftext;
 			_inf[i].SefNum(ftext);
-
 			f1 >> ftext;
 			_inf[i].SefType(ftext);
-
 			f1 >> ftext;
 			_inf[i].SefProduct(ftext);
 			f1 >> ftext;
@@ -74,8 +72,8 @@ int main()
 		cout << "\n\n----------------------------------------------------------------------------------------------------------------------------------------\n\n" << endl;
 		f1.close();
 		cout << "\n\n\n->:::::::::::::..........MENU..........:::::::::::::::." << endl;
-		cout << "\nFULL Information -1\n ::::::: -2" << endl;
-		cout << "::::::: - 3" << endl;
+		cout << "\nFULL Information -1\n [------] -2" << endl;
+		cout << "[::::::] - 3" << endl;
 		cout << "Search - 4" << endl;
 		cout << "Add new - 5\nDelete product  - 6\nEdit product - 7" << endl;
 		cout << "exit  - 8" << endl;
@@ -93,7 +91,7 @@ int main()
 				if (_inf[i].GefNum() == fNum) {
 					pCount++;
 					if (_inf[i].GefType() == "PC")
-						cout << _inf[i].GefNum() << " || " << _inf[i].GefType() << " || " << _inf[i].GefProduct() << " || " << _inf[i].GefCharacteristic() << " ||" << _inf[i].GefGoods() << " || " << _inf[i].GefCount() << " || " << _inf[i].GefRAM() << " || " << _inf[i].GefVideocard() << " " << _inf[i].GefCPU() << " ||" << endl;
+						cout << _inf[i].GefNum() << " || " << _inf[i].GefType() << " || " << _inf[i].GefProduct() << " || " << _inf[i].GefCharacteristic() << " ||" << _inf[i].GefGoods() << " || " << _inf[i].GefCount() << /*" || " << _inf[i].GefRAM() << " || " << _inf[i].GefVideocard() << " " << _inf[i].GefCPU() << " ||" <<*/ endl;
 				}
 				else if (_inf[i].GefType() == "PC") {
 
@@ -191,7 +189,7 @@ int main()
 			cout << "ENTER PRICE: ";
 			cin >> fCount;
 			_inf[N].SefCount(fCount);
-			cout << "Enter RAM: ";
+			/*cout << "Enter RAM: ";
 			cin >> fRAM;
 			_inf[N].SefRAM(fRAM);
 			cout << "Enter VideoCard: ";
@@ -199,7 +197,7 @@ int main()
 			_inf[N].SefVideocard(fVideocard);
 			cout << "Enter CPU: ";
 			cin >> fCPU;
-			_inf[N].SefCPU(fCPU);
+			_inf[N].SefCPU(fCPU);*/
 			stringstream D;
 			D << N + 1;
 			_inf[N].SefNum(D.str());
@@ -213,6 +211,7 @@ int main()
 				f2 << _inf[i].GefCharacteristic() << " ";
 				f2 << _inf[i].GefGoods() << " ";
 				f2 << _inf[i].GefCount() << " \n";
+\
 			}
 			f2 << _inf[N].GefNum() << " ";
 			f2 << _inf[N].GefType() << " ";
